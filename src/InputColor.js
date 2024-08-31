@@ -1,6 +1,6 @@
 import colorNames from "colornames";
 
-const InputColor = ({ setColorCard, setColorHex }) => {
+const InputColor = ({ setColorCard, setColorHex, isDarkText, setIsDarkText }) => {
   return (
     <form onSubmit={(e) => e.preventDefault()}>
       <input
@@ -11,6 +11,12 @@ const InputColor = ({ setColorCard, setColorHex }) => {
           setColorCard(e.target.value)
           setColorHex(colorNames(e.target.value))
         }} />
+      <button
+        type="button"
+        onClick={() => setIsDarkText(!isDarkText)}
+      >
+        Toggle Text Color
+      </button>
     </form>
   )
 }

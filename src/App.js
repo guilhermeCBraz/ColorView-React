@@ -5,6 +5,7 @@ import Content from './Content';
 function App() {
   const [colorCard, setColorCard] = useState('');
   const [colorHex, setColorHex] = useState('');
+  const [isDarkText, setIsDarkText] = useState(true);
 
   return (
     <div className="App">
@@ -12,7 +13,9 @@ function App() {
         colorCard={colorCard}
         setColorCard={setColorCard}
         colorHex={colorHex}
-        setColorHex={setColorHex} />
+        setColorHex={setColorHex}
+        isDarkText={isDarkText}
+        setIsDarkText={setIsDarkText} />
     </div>
   );
 }
